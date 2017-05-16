@@ -1,0 +1,29 @@
+Is it necessary to set up test automation processes for this SUT? Why?
+
+I think on my current project it is neccessary to set up test automation processes because:
+1. Project is long term with release each 2 weeks, so we need to perform regression testing for whole project on this basis
+2. Frequency of performing test scenarios is high: regression every 2 weeks on DEMO environment and also every 4 weeks full regression on QED and Production enverionments
+3. We have a large number of test cases which require big time/human spendings
+4. Test automation process is required by Customer
+5. In generally we have a big number of test cases, because the project is complex and multifunctional, so even if we will execute simple test cases it will take too much time
+
+What should/could be automated for this SUT? Why? How? 
+
+1. We need to automate all our regression tests. Because they are run every 2 weeks on DEMO and every 4 weeks on QED and Production. Because project is fast-growing and in every release we have new functionalities count of regression test also grow up.
+2. Also we need to automate complex and time-consuming test cases, for example test case for registration new user in the system.
+3. We can automate routine tasks. For example: create new user, edit user information, delete user.
+4. We need to automate running smoke test after every check in from developers on lower environments (CI and DEMO)
+
+Define and collect information and criteria for calculating ROI (Return of Investments) value for this SUT. Provide rationale of your calculation with description on each step. 
+
+Project Cayman has stable SUT with long-term perspective of supporting as at least 5 years. Average time required for manual testing is 240 man-hour per week (8 testers each 30 man-hours per week)
+
+Cost of manual testing: 240 * 52 * 5 = 62400
+
+TAF implementation: around 120 man-hours as we have complex project
+
+Time spent for creating automated scenarios: 40 man-hours per week during 12 months (12 months because we already have some test cases which were created in SoapUI, so we should just rewrite them in WebDrive and also we need to cover just regression tests): 40 * 4 * 12 = 1920 man-hours * 2 (x2 because we have UI fraemwork in TestComplete almost the same situation as with SoapUI) = 3840 man-hours
+
+Automated test execution and results analyzis: 16 man-hours per week (because we have different fraemworks for UI and backend automation) * 52 * 5 = 4160 man-hours
+
+ROI = (62400-(3840+4160))/(3840+4160) = 68%
