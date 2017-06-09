@@ -43,47 +43,32 @@ namespace Task_3._1.Nunit
             Assert.AreEqual(result, calculator.Sub(number1, number2));
         }
 
-        [TestMethod]
-        public void CheckAddTwoStringIntPositive()
+        [Test]
+		[TestCase("10", "15")]
+		[TestCase("10", "-15")]
+		[TestCase("-10", "15")]
+		[TestCase("-10", "-15")]
+		public void CheckAddTwoStringInt(string number1, string number2)
         {
-            string number1 = "10";
-            string number2 = "15";
             int result = Convert.ToInt32(number1) + Convert.ToInt32(number2);
             //Assert
             Assert.AreEqual(result, calculator.Add(number1, number2));
         }
 
-        [TestMethod]
-        public void CheckAddTwoStringDoublePositive()
+
+        [Test]
+		[TestCase("10.1", "15.1")]
+		[TestCase("10.1", "-15.1")]
+		[TestCase("-10.1", "15.1")]
+		[TestCase("-10.1", "-15.1")]
+		public void CheckAddTwoStringDouble(string number1, string number2)
         {
-            string number1 = "10.1";
-            string number2 = "15.1";
             double result = Convert.ToDouble(number1) + Convert.ToDouble(number2);
             //Assert
             Assert.AreEqual(result, calculator.Add(number1, number2));
         }
 
-        [TestMethod]
-        public void CheckAddTwoStringIntNegative()
-        {
-            string number1 = "-10";
-            string number2 = "-15";
-            int result = Convert.ToInt32(number1) + Convert.ToInt32(number2);
-            //Assert
-            Assert.AreEqual(result, calculator.Add(number1, number2));
-        }
-
-        [TestMethod]
-        public void CheckAddTwoStringDoubleNegative()
-        {
-            string number1 = "-10.1";
-            string number2 = "-15.1";
-            double result = Convert.ToDouble(number1) + Convert.ToDouble(number2);
-            //Assert
-            Assert.AreEqual(result, calculator.Add(number1, number2));
-        }
-
-        [TestMethod]
+        [Test]
         public void CheckAddStringIntPositiveStringDoubleNegative()
         {
             string number1 = "10";
@@ -93,11 +78,13 @@ namespace Task_3._1.Nunit
             Assert.AreEqual(result, calculator.Add(number1, number2));
         }
 
-        [TestMethod]
-        public void CheckAddStringIntNegativeStringDoublePositive()
+        [Test]
+		[TestCase("10", "15.1")]
+		[TestCase("10", "-15.1")]
+		[TestCase("-10", "15.1")]
+		[TestCase("-10", "-15.1")]
+		public void CheckAddStringIntStringDouble(string number1, string number2)
         {
-            string number1 = "-10";
-            string number2 = "15.1";
             double result = Convert.ToInt32(number1) + Convert.ToDouble(number2);
             //Assert
             Assert.AreEqual(result, calculator.Add(number1, number2));

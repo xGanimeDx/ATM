@@ -27,7 +27,7 @@ namespace Task_3._1.MSTest
 		//}
 
 		[TestMethod]
-		public void CheckAbsValidIntPositiveValue()
+		public void CheckAbsIntPositiveValue()
 		{
 			int number = 10;
 			//Assert
@@ -35,7 +35,7 @@ namespace Task_3._1.MSTest
 		}
 
 		[TestMethod]
-		public void CheckAbsValidDoublePositiveValue()
+		public void CheckAbsDoublePositiveValue()
 		{
 			double number = 10.1;
 			//Assert 
@@ -43,7 +43,7 @@ namespace Task_3._1.MSTest
 		}
 
 		[TestMethod]
-		public void CheckAbsValidStringIntPositiveValue()
+		public void CheckAbsStringIntPositiveValue()
 		{
 			string number = "10";
 			//Assert
@@ -51,7 +51,7 @@ namespace Task_3._1.MSTest
 		}
 
 		[TestMethod]
-		public void CheckAbsValidStringDoublePositiveValue()
+		public void CheckAbsStringDoublePositiveValue()
 		{
 			string number = "10.1";
 			//Assert
@@ -59,7 +59,7 @@ namespace Task_3._1.MSTest
 		}
 
 		[TestMethod]
-		public void CheckAbsValidIntNegativeValue()
+		public void CheckAbsIntNegativeValue()
 		{
 			int number = -10;
 			//Assert
@@ -67,7 +67,7 @@ namespace Task_3._1.MSTest
 		}
 
 		[TestMethod]
-		public void CheckAbsValidDoubleNegativeValue()
+		public void CheckAbsDoubleNegativeValue()
 		{
 			double number = -10.1;
 			//Assert
@@ -75,7 +75,7 @@ namespace Task_3._1.MSTest
 		}
 
 		[TestMethod]
-		public void CheckAbsValidStringIntNegativeValue()
+		public void CheckAbsStringIntNegativeValue()
 		{
 			string number = "-10";
 			//Assert
@@ -83,7 +83,7 @@ namespace Task_3._1.MSTest
 		}
 
 		[TestMethod]
-		public void CheckAbsValidStringDoubleNegativeValue()
+		public void CheckAbsStringDoubleNegativeValue()
 		{
 			string number = "-10.1";
 			//Assert 
