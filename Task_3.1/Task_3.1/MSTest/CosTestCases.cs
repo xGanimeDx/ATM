@@ -10,7 +10,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosIntPositive()
 		{
 			int number = 10;
-			//Assert
 			Assert.AreEqual(Math.Cos(number), calculator.Cos(number));
 		}
 
@@ -18,7 +17,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosIntNegative()
 		{
 			int number = -10;
-			//Assert
 			Assert.AreEqual(Math.Cos(number), calculator.Cos(number));
 		}
 
@@ -26,7 +24,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosDoublePositive()
 		{
 			double number = 10.1;
-			//Assert
 			Assert.AreEqual(Math.Cos(number), calculator.Cos(number));
 		}
 
@@ -34,7 +31,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosDoubleNegative()
 		{
 			double number = -10.1;
-			//Assert
 			Assert.AreEqual(Math.Cos(number), calculator.Cos(number));
 		}
 
@@ -42,7 +38,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosIntZero()
 		{
 			int number = 0;
-			//Assert
 			Assert.AreEqual(Math.Cos(number), calculator.Cos(number));
 		}
 
@@ -50,7 +45,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosDoubleZero()
 		{
 			double number = 0.0;
-			//Assert
 			Assert.AreEqual(Math.Cos(number), calculator.Cos(number));
 		}
 
@@ -58,7 +52,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosStringIntPositive()
 		{
 			string number = "10";
-			//Assert
 			Assert.AreEqual(Math.Cos(Convert.ToInt32(number)), calculator.Cos(number));
 		}
 
@@ -66,7 +59,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosStringIntNegative()
 		{
 			string number = "-10";
-			//Assert
 			Assert.AreEqual(Math.Cos(Convert.ToInt32(number)), calculator.Cos(number));
 		}
 
@@ -74,7 +66,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosStringDoublePositive()
 		{
 			string number = "10.1";
-			//Assert
 			Assert.AreEqual(Math.Cos(Convert.ToDouble(number)), calculator.Cos(number));
 		}
 
@@ -82,7 +73,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosStringDoubleNegative()
 		{
 			string number = "-10.1";
-			//Assert
 			Assert.AreEqual(Math.Cos(Convert.ToDouble(number)), calculator.Cos(number));
 		}
 
@@ -90,7 +80,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosStringIntZero()
 		{
 			string number = "0";
-			//Assert
 			Assert.AreEqual(Math.Cos(Convert.ToInt32(number)), calculator.Cos(number));
 		}
 
@@ -98,7 +87,6 @@ namespace Task_3._1.MSTest
 		public void CheckCosStringDoubleZero()
 		{
 			string number = "0.0";
-			//Assert
 			Assert.AreEqual(Math.Cos(Convert.ToDouble(number)), calculator.Cos(number));
 		}
 

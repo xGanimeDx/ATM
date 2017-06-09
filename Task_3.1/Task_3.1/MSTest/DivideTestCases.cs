@@ -12,7 +12,7 @@ namespace Task_3._1.MSTest
             int number1 = 10;
             int number2 = 15;
             int result = number1 / number2;
-            //Assert		
+            		
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -22,7 +22,7 @@ namespace Task_3._1.MSTest
             double number1 = 10.1;
             double number2 = 15.1;
             double result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -32,7 +32,7 @@ namespace Task_3._1.MSTest
             int number1 = -10;
             int number2 = -15;
             int result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -42,7 +42,7 @@ namespace Task_3._1.MSTest
             double number1 = -10.1;
             double number2 = -15.1;
             double result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -52,7 +52,7 @@ namespace Task_3._1.MSTest
             int number1 = 10;
             int number2 = -15;
             int result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -62,7 +62,7 @@ namespace Task_3._1.MSTest
             double number1 = 10.1;
             double number2 = -15.1;
             double result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -72,7 +72,7 @@ namespace Task_3._1.MSTest
             int number1 = 10;
             double number2 = 15.1;
             double result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -82,7 +82,7 @@ namespace Task_3._1.MSTest
             int number1 = -10;
             double number2 = -15.1;
             double result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -92,7 +92,7 @@ namespace Task_3._1.MSTest
             int number1 = 10;
             double number2 = -15.1;
             double result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -102,7 +102,7 @@ namespace Task_3._1.MSTest
             int number1 = -10;
             double number2 = 15.1;
             double result = number1 / number2;
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(number1, number2));
         }
 
@@ -112,7 +112,7 @@ namespace Task_3._1.MSTest
             string number1 = "10";
             string number2 = "15";
             int result = Convert.ToInt32(number1) / Convert.ToInt32(number2);
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(Convert.ToInt32(number1), Convert.ToInt32(number2)));
         }
 
@@ -122,7 +122,7 @@ namespace Task_3._1.MSTest
             string number1 = "10.1";
             string number2 = "15.1";
             double result = Convert.ToDouble(number1) / Convert.ToDouble(number2);
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(Convert.ToDouble(number1), Convert.ToDouble(number2)));
         }
 
@@ -132,7 +132,7 @@ namespace Task_3._1.MSTest
             string number1 = "-10";
             string number2 = "-15";
             int result = Convert.ToInt32(number1) / Convert.ToInt32(number2);
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(Convert.ToInt32(number1), Convert.ToInt32(number2)));
         }
 
@@ -142,7 +142,7 @@ namespace Task_3._1.MSTest
             string number1 = "-10.1";
             string number2 = "-15.1";
             double result = Convert.ToDouble(number1) / Convert.ToDouble(number2);
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(Convert.ToDouble(number1), Convert.ToDouble(number2)));
         }
 
@@ -152,7 +152,7 @@ namespace Task_3._1.MSTest
             string number1 = "10";
             string number2 = "-15.1";
             double result = Convert.ToInt32(number1) / Convert.ToDouble(number2);
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(Convert.ToInt32(number1), Convert.ToDouble(number2)));
         }
 
@@ -162,7 +162,7 @@ namespace Task_3._1.MSTest
             string number1 = "-10";
             string number2 = "15.1";
             double result = Convert.ToInt32(number1) / Convert.ToDouble(number2);
-            //Assert
+            
             Assert.AreEqual(result, calculator.Divide(Convert.ToInt32(number1), Convert.ToDouble(number2)));
         }
 
@@ -172,7 +172,7 @@ namespace Task_3._1.MSTest
         {
             int number1 = 0;
             int number2 = 0;
-            //Act and Assert
+            
             calculator.Divide(number1, number2);
         }
 
@@ -182,7 +182,7 @@ namespace Task_3._1.MSTest
         {
             double number1 = 0.0;
             double number2 = 0.0;
-            //Act and Assert
+            
             calculator.Divide(number1, number2);
         }
 
@@ -192,7 +192,7 @@ namespace Task_3._1.MSTest
         {
             int number1 = 10;
             int number2 = 0;
-            //Act and Assert
+            
             calculator.Divide(number1, number2);
 
         }
@@ -203,7 +203,7 @@ namespace Task_3._1.MSTest
         {
             int number1 = -10;
             int number2 = 0;
-            //Act and Assert
+            
             calculator.Divide(number1, number2);
 
         }
@@ -214,7 +214,7 @@ namespace Task_3._1.MSTest
         {
             double number1 = 10.1;
             int number2 = 0;
-            //Act and Assert
+            
             calculator.Divide(number1, number2);
 
         }
@@ -225,7 +225,7 @@ namespace Task_3._1.MSTest
         {
             double number1 = -10.1;
             int number2 = 0;
-            //Act and Assert
+            
             calculator.Divide(number1, number2);
 
         }

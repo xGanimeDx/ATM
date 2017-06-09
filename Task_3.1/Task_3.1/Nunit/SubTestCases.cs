@@ -1,21 +1,20 @@
 ﻿using System;
-using NUnit;
 using NUnit.Framework;
 
 namespace Task_3._1.Nunit
 {
     [TestFixture]
-    public class SubTestCases : BaseNunitTestClass
+	[Parallelizable(ParallelScope.Children)]
+	public class SubTestCases : BaseNunitTestClass
     {
         [Test]
         [TestCase(10, 15)]
         [TestCase(10, -15)]
         [TestCase(-10, 15)]
         [TestCase(-10, -15)]
-        public void CheckSubTwoInt(int number1, int number2)
+		public void CheckSubTwoInt(int number1, int number2)
         {
-            int result = number1 - number2;
-            //Assert		
+            int result = number1 - number2;	
             Assert.AreEqual(result, calculator.Sub(number1, number2));
         }
 
@@ -26,8 +25,7 @@ namespace Task_3._1.Nunit
         [TestCase(-10.1, -15.1)]
         public void CheckSubTwoDouble(double number1, double number2)
         {
-            double result = number1 + number2;
-            //Assert
+			double result = number1 + number2;
             Assert.AreEqual(result, calculator.Sub(number1, number2));
         }
 
@@ -38,8 +36,7 @@ namespace Task_3._1.Nunit
         [TestCase(-10, -15.1)]
         public void CheckSubIntAndDouble(int number1, double number2)
         {
-            double result = number1 + number2;
-            //Assert
+			double result = number1 + number2;
             Assert.AreEqual(result, calculator.Sub(number1, number2));
         }
 
@@ -51,7 +48,6 @@ namespace Task_3._1.Nunit
 		public void CheckAddTwoStringInt(string number1, string number2)
         {
             int result = Convert.ToInt32(number1) + Convert.ToInt32(number2);
-            //Assert
             Assert.AreEqual(result, calculator.Add(number1, number2));
         }
 
@@ -64,17 +60,6 @@ namespace Task_3._1.Nunit
 		public void CheckAddTwoStringDouble(string number1, string number2)
         {
             double result = Convert.ToDouble(number1) + Convert.ToDouble(number2);
-            //Assert
-            Assert.AreEqual(result, calculator.Add(number1, number2));
-        }
-
-        [Test]
-        public void CheckAddStringIntPositiveStringDoubleNegative()
-        {
-            string number1 = "10";
-            string number2 = "-15.1";
-            double result = Convert.ToInt32(number1) + Convert.ToDouble(number2);
-            //Assert
             Assert.AreEqual(result, calculator.Add(number1, number2));
         }
 
@@ -86,7 +71,6 @@ namespace Task_3._1.Nunit
 		public void CheckAddStringIntStringDouble(string number1, string number2)
         {
             double result = Convert.ToInt32(number1) + Convert.ToDouble(number2);
-            //Assert
             Assert.AreEqual(result, calculator.Add(number1, number2));
         }
 
@@ -96,7 +80,7 @@ namespace Task_3._1.Nunit
             int number1 = 0;
             int number2 = 0;
             int result = number1 + number2;
-            //Assert
+
             Assert.AreEqual(result, calculator.Sub(number1, number2));
         }
 
@@ -106,14 +90,13 @@ namespace Task_3._1.Nunit
             double number1 = 0.0;
             double number2 = 0.0;
             double result = number1 + number2;
-            //Assert
+
             Assert.AreEqual(result, calculator.Sub(number1, number2));
         }
 
         [Test]
         public void CheckAddStringValue()
         {
-            //Assert
             Assert.Throws<NotFiniteNumberException>(() => calculator.Sub("string1", "string2"));
         }
     }

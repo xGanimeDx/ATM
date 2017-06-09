@@ -1,18 +1,17 @@
 ﻿using System;
-using NUnit;
 using NUnit.Framework;
 
 namespace Task_3._1.Nunit
 {
     [TestFixture]
-    public class SinTestCases : BaseNunitTestClass
+	[Parallelizable(ParallelScope.Children)]
+	public class SinTestCases : BaseNunitTestClass
     {
         [Test]
         [TestCase(10)]
         [TestCase(-10)]
         public void CheckSinInt(int number)
         {
-            //Assert
             Assert.AreEqual(Math.Sin(number), calculator.Sin(number));
         }
 
@@ -21,7 +20,6 @@ namespace Task_3._1.Nunit
         [TestCase(-10.1)]
         public void CheckSinDouble(double number)
         {
-            //Assert
             Assert.AreEqual(Math.Sin(number), calculator.Sin(number));
         }
 
@@ -29,7 +27,6 @@ namespace Task_3._1.Nunit
         public void CheckSinIntZero()
         {
             int number = 0;
-            //Assert
             Assert.AreEqual(Math.Sin(number), calculator.Sin(number));
         }
 
@@ -37,7 +34,6 @@ namespace Task_3._1.Nunit
         public void CheckSinDoubleZero()
         {
             double number = 0.0;
-            //Assert
             Assert.AreEqual(Math.Sin(number), calculator.Sin(number));
         }
 
@@ -46,7 +42,6 @@ namespace Task_3._1.Nunit
         [TestCase("-10")]
         public void CheckSinStringInt(string number)
         {
-            //Assert
             Assert.AreEqual(Math.Sin(Convert.ToInt32(number)), calculator.Sin(number));
         }
 
@@ -55,7 +50,6 @@ namespace Task_3._1.Nunit
         [TestCase("-10.1")]
         public void CheckSinStringDouble(string number)
         {
-            //Assert
             Assert.AreEqual(Math.Sin(Convert.ToDouble(number)), calculator.Sin(number));
         }
 
@@ -63,7 +57,6 @@ namespace Task_3._1.Nunit
         public void CheckSinStringIntZero()
         {
             string number = "0";
-            //Assert
             Assert.AreEqual(Math.Sin(Convert.ToInt32(number)), calculator.Sin(number));
         }
 
@@ -71,14 +64,12 @@ namespace Task_3._1.Nunit
         public void CheckSinStringDoubleZero()
         {
             string number = "0.0";
-            //Assert
             Assert.AreEqual(Math.Sin(Convert.ToDouble(number)), calculator.Sin(number));
         }
 
         [Test]
         public void CheckSinStringValue()
         {
-            //Assert
             Assert.Throws<NotFiniteNumberException>(() => calculator.Sin("string"));
         }
     }

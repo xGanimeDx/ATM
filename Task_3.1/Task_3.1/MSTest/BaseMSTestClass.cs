@@ -7,21 +7,7 @@ namespace Task_3._1.MSTest
 	[TestClass]
 	public class BaseMSTestClass
 	{
-		//Arrange for all test cases
 		public Calculator calculator;
-
-		private TestContext testContextInstance;
-		public TestContext TestContext
-		{
-			get { return testContextInstance; }
-			set { testContextInstance = value; }
-		}
-
-		[ClassInitialize]
-		public void ClassSetup(TestContext testContext)
-		{
-			TestContext = testContext;
-		}
 
 		[TestInitialize]
 		public void TestSetup()

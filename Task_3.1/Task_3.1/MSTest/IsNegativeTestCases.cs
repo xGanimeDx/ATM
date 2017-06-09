@@ -10,7 +10,6 @@ namespace Task_3._1.MSTest
         public void CheckIsNegativeIntPositive()
         {
             int number = 10;
-            //Assert
             Assert.AreEqual(false, calculator.isNegative(number));
         }
 
@@ -18,7 +17,6 @@ namespace Task_3._1.MSTest
         public void CheckIsNegativeIntNegative()
         {
             int number = -10;
-            //Assert
             Assert.AreEqual(true, calculator.isNegative(number));
         }
 
@@ -26,7 +24,6 @@ namespace Task_3._1.MSTest
         public void CheckIsNegativeDoublePositive()
         {
             double number = 10.1;
-            //Assert
             Assert.AreEqual(false, calculator.isNegative(number));
         }
 
@@ -34,7 +31,6 @@ namespace Task_3._1.MSTest
         public void CheckIsNegativeDoubleNegative()
         {
             double number = -10.1;
-            //Assert
             Assert.AreEqual(true, calculator.isNegative(number));
         }
 
@@ -42,7 +38,6 @@ namespace Task_3._1.MSTest
         public void CheckIsNegativeStringIntPositive()
         {
             string number = "10";
-            //Assert
             Assert.AreEqual(false, calculator.isNegative(number));
         }
 
@@ -50,7 +45,6 @@ namespace Task_3._1.MSTest
         public void CheckIsNegativeStringIntNegative()
         {
             string number = "-10";
-            //Assert
             Assert.AreEqual(true, calculator.isNegative(number));
         }
 
@@ -58,7 +52,6 @@ namespace Task_3._1.MSTest
         public void CheckIsNegativeStringDoublePositive()
         {
             string number = "10.1";
-            //Assert
             Assert.AreEqual(false, calculator.isNegative(number));
         }
 
@@ -66,7 +59,6 @@ namespace Task_3._1.MSTest
         public void CheckIsNegativeStringDoubleNegative()
         {
             string number = "-10.1";
-            //Assert
             Assert.AreEqual(true, calculator.isNegative(number));
         }
 
@@ -74,7 +66,6 @@ namespace Task_3._1.MSTest
         [ExpectedException(typeof(NotFiniteNumberException))]
         public void CheckIsNegativeString()
         {
-            //Assert
             calculator.isNegative("string1");
         }
     }
